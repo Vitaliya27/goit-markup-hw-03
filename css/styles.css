@@ -12,6 +12,11 @@ body {
     line-height: 1.5;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 a {
     text-decoration: none;
 }
@@ -25,10 +30,20 @@ span {
     
 }
 
+/* .container {
+    display: flex;
+} */
+
+nav {
+    display: flex;
+    flex-direction: row;
+}
+
 /* Header section */
 
-.header {
+.header .container {
     background: var(--white, #FFF);
+    display: flex;
 }
 
 .link {
@@ -43,15 +58,20 @@ span {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--navyblue, #4d5ae5);
+    display: flex;
+    margin: 24px 0 24px 156px;
 }
 
 .header-span {
     color: var(--navyblue, #2e2f42);
 }
 
-.list {
+.container nav .list {
     list-style: none;
-    background-color: #FFFFFF
+    background-color: #FFFFFF;
+    display: flex;
+    gap: 40px;
+    margin: 24px 0 24px 76px;
 }
 
 .list-item {
@@ -71,8 +91,10 @@ span {
     color: #404bbf;
 }
 
-.address-section {
-    font-style: normal;
+.container address .list {
+    display: flex;
+    gap: 40px;
+    margin: 24px 156px 24px 332px;
 }
 
 .address-item {
@@ -112,17 +134,29 @@ span {
     color: #f4f4fd;
 }
 
+/* Main section */
+
 /* Hero section */
 
-.hero {
+.hero  {
     background: var(--navyblue, #2E2F42);
     color: #ffffff;
+    height: 600px;
+    padding: 0;
+    padding-top: 188px;
+}
+
+.container .hero {
+    min-width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .hero-item {
     color: var(--white, #ffffff);
     text-align: center;
-    font-family: Roboto;
+    font-family: "Roboto";
     font-size: 56px;
     font-style: normal;
     font-weight: 700;
@@ -140,6 +174,9 @@ span {
     line-height: 1.5;
     letter-spacing: 0.64px;
     cursor: pointer;
+    text-align: center;
+    padding: 24px 32px;
+    margin: 48px 635px 120px 636px;
 }
 
 .button:hover {
@@ -150,9 +187,18 @@ span {
     background-color: #404BBF;
 }
 
-/* Main section */
-
 /* Feutures section */
+
+.feutures .container{
+    margin-left: 0;
+    margin: 120px 156px;
+}
+
+.feutures .container .list {
+    
+    gap: 24px;
+    display: flex;
+}
 
 .feutures-title {
     color: var(--navyblue, #2e2f42);
@@ -160,6 +206,7 @@ span {
     font-style: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    display: none;
 }
 
 .feutures-item {

@@ -44,6 +44,11 @@ nav {
 .header .container {
     background: var(--white, #FFF);
     display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--cornflower, #E7E9FC);
+    background: var(--white, #FFF);;
 }
 
 .link {
@@ -58,8 +63,11 @@ nav {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--navyblue, #4d5ae5);
-    display: flex;
-    margin: 24px 0 24px 156px;
+    margin-top: 24px;
+    display: inline-flex;
+    height: 24px;
+    align-items: center;
+    flex-shrink: 0;
 }
 
 .header-span {
@@ -94,7 +102,7 @@ nav {
 .container address .list {
     display: flex;
     gap: 40px;
-    margin: 24px 156px 24px 332px;
+    margin: 24px 0 24px 332px;
 }
 
 .address-item {
@@ -119,15 +127,35 @@ nav {
 .footer {
     background: var(--navyblue, #2E2F42);
     font-family: 'Raleway', sans-serif;
+    height: 312px;
+    padding-top: 100px;
+}
+
+.footer .logo {
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--navyblue, #4d5ae5);
+    margin-left: 200px;
+    margin-top: 0;
+    
 }
 
 .text-footer {
     color: var(--navyblue, #F4F4FD);
+    font-family: "Roboto";
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    width: 264px;
+    height: 112px;
+    margin-top: 16px;
+    margin-left: 200px;
 }
 
 .footer-span {
@@ -174,8 +202,13 @@ nav {
     line-height: 1.5;
     letter-spacing: 0.64px;
     cursor: pointer;
-    text-align: center;
-    padding: 24px 32px;
+    border-radius: 4px;
+    background: var(--iris, #4D5AE5);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    display: inline-flex;
+    padding: 16px 32px;
+    align-items: flex-start;
+    gap: 10px;
     margin: 48px 0 120px 0;
 }
 
@@ -190,14 +223,17 @@ nav {
 /* Feutures section */
 
 .feutures .container{
-    margin-left: 0;
-    margin: 120px 156px;
+    margin: 120px 0;
 }
 
-.feutures .container .list {
-    
+.feutures .list {
     gap: 24px;
     display: flex;
+    flex-direction: row;
+    padding: 0;
+    max-width: 100%;
+    height: 104px;
+    justify-content: center;
 }
 
 .feutures-title {
@@ -217,13 +253,18 @@ nav {
     font-weight: 500;
     line-height: 1.2; 
     letter-spacing: 0.02em;
+    margin-bottom: 8px;
 }
 
 .feutures-text {
     color: var(--slate, #434455);
     font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
     line-height: 1.5; 
     letter-spacing: 0.02em;
+    width: 264px;
+    display: flex;
 }
 
 /* what are we doing */
@@ -238,11 +279,27 @@ nav {
     text-align: center;
 }
 
+.portfolio-section .container .list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin: 72px 0 120px 0;
+}
+
 
 /* team section */
 
 .team-section {
     background-color: #F4F4FD;
+    height: 732px;
+    flex-shrink: 0;
+    padding-top: 120px;
+}
+
+.team-section .list {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
 }
 
 .team-title {
@@ -258,6 +315,10 @@ nav {
 
 .team-list {
     background-color: #FFFFFF;
+    margin-top: 72px;
+    border-radius: 0px 0px 4px 4px;
+    background: var(--white, #FFF);
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .team-name {
@@ -268,6 +329,14 @@ nav {
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.4px;
+    margin-top: 32px;
+    margin-bottom: 8px;
+    text-align: center;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .position {
@@ -277,12 +346,29 @@ nav {
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.32px;
+    margin-bottom: 32px;
+    text-align: center;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Portfolio Page */
 
+.portfolio h1 {
+    display: none;
+}
+
+.portfolio .container .list {
+    display: flex;
+    gap: 24px;
+}
+
 .buttons {
     padding-right: 24px;
+
 }
 
 .buttons-item {
@@ -295,6 +381,9 @@ nav {
     letter-spacing: 0.04em;
     background: var(--cloud, #F4F4FD);
     cursor: pointer;
+    display: flex;
+    padding: 12px 24px;
+    align-items: flex-start;
 }
 
 .buttons-item:hover {

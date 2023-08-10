@@ -403,7 +403,9 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 24px;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
 }
 
 .buttons-item {
